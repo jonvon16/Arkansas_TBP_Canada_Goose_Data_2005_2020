@@ -1,4 +1,4 @@
-# Data Associated with Veon et al., Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese
+# Data (DOI:10.5281/zenodo.18027557) Associated with Veon et al., Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese
 This repository contains 1) Program MARK Arkansas Canada goose banding and encounter data, as well as 2) harvest probability and abundance data/calculations, associated with the manuscript: Veon et al., Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese.
 
 ### Arkansas_TBP_Canada_Goose_Data_2005_2020
