@@ -18,5 +18,5 @@ This file contains the calculations, as well as the resulting harvest probabilit
 ### References
 USGS Bird Banding Laboratory [USGS BBL]. 2021. North American bird banding and band encounter data set. U.S. Geological Survey, Laurel, Maryland, USA.
 
-Veon, J. T. 2025. Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. Dataset. Zenodo. https://zenodo.org/records/18038697.
+Veon, J. T. 2025. Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. Dataset. Zenodo. (https://zenodo.org/records/18038697).
 
