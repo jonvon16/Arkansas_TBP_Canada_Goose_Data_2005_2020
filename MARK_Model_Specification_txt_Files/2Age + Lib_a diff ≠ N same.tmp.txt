@@ -1,0 +1,1060 @@
+
+   Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:30    Page  001
+    
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   Welcome to MARK johnv on machine DESKTOP-EO59MVU in subdirectory 
+   "D:\AGFC_CAGO_PROJ\NEWCAGOMARKFILES_MAY2022\MANUSCRIPT_R1_MODELS_LAGTREND_HUNT_SEPCOLUMNS" running file "mrk9130z.tmp".
+   This version was compiled by GCC version 11.2.0 using the options: 
+     -cpp -iprefix c:\tdm-gcc-64\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/11.2.0/
+     -D_MT -D_REENTRANT -U_REENTRANT -D IEEE -D DBLEPRECISION -m64 -mtune=generic
+     -march=x86-64 -mthreads -O2 -std=f2018 -fimplicit-none -fbounds-check
+     -funroll-loops -ftree-vectorize -ffpe-summary=invalid,zero,overflow,underflow
+     -fno-unsafe-math-optimizations -frounding-math -fsignaling-nans -flto
+     -fall-intrinsics -fopenmp.
+
+   This problem will use 8 of 8 possible threads.
+
+
+  INPUT --- proc title Veon_Dooley_ModelSet_Redo;
+
+   CPU Time for the last procedure was 0.01 seconds.     
+
+
+  INPUT --- proc chmatrix occasions=16 groups=2 etype=Both mixtures=1 
+  INPUT --- Nodes=101 NoHist hist=21497;
+
+  INPUT ---    glabel(1)=Group 1;
+
+  INPUT ---    glabel(2)=Group 2;
+
+  INPUT ---    time interval 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+
+   * *  WARNING  * *   At least a pair of the encounter histories are duplicates. 
+
+      Number of unique encounter histories read was 547.
+
+      Number of individual covariates read was 0.
+      Time interval lengths are all equal to 1.
+
+      Data type number is 3
+      Data type is Joint Live and Dead Encounters (Burnham)
+
+   CPU Time for the last procedure was 0.50 seconds.     
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  002
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+
+
+  INPUT --- proc estimate link=Logit varest=2ndPart ;
+
+
+  INPUT --- model={DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_Separa
+  INPUT --- tedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTre
+  INPUT --- nd]};
+
+  INPUT ---    group=1 S rows=16 cols=16 Triang;
+  INPUT ---               17  33  34   4   5   6   7   8   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                   18  34  35   5   6   7   8   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                       19  35  36   6   7   8   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                           20  36  37   7   8   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                               21  37  38   8   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                   22  38  39   9  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                       23  39  40  10  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                           24  40  41  11  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                               25  41  42  12  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                                   26  42  43  13  
+  INPUT ---       14  15  16;
+  INPUT ---                                                       27  43  44  
+  INPUT ---       14  15  16;
+  INPUT ---                                                           28  44  
+  INPUT ---       45  15  16;
+  INPUT ---                                                               29  
+  INPUT ---       45  46  16;
+  INPUT ---                                                                   
+  INPUT ---       30  46  47;
+  INPUT ---                                                                   
+  INPUT ---           31  47;
+  INPUT ---                                                                   
+  INPUT ---               32;
+
+  INPUT ---    group=2 S rows=16 cols=16 Triang Time=1;
+
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  003
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---    group=1 p rows=15 cols=15 Triang;
+  INPUT ---               63  64  50  51  52  53  54  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                   64  65  51  52  53  54  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                       65  66  52  53  54  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                           66  67  53  54  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                               67  68  54  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                   68  69  55  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                       69  70  56  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                           70  71  57  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                               71  72  58  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                                   72  73  59  60  
+  INPUT ---       61  62;
+  INPUT ---                                                       73  74  60  
+  INPUT ---       61  62;
+  INPUT ---                                                           74  75  
+  INPUT ---       61  62;
+  INPUT ---                                                               75  
+  INPUT ---       76  62;
+  INPUT ---                                                                   
+  INPUT ---       76  77;
+  INPUT ---                                                                   
+  INPUT ---           77;
+
+  INPUT ---    group=2 p rows=15 cols=15 Triang Time=48;
+
+  INPUT ---    group=1 r rows=16 cols=16 Triang;
+  INPUT ---               94 110 111  81  82  83  84  85  86  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                   95 111 112  82  83  84  85  86  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                       96 112 113  83  84  85  86  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                           97 113 114  84  85  86  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                               98 114 115  85  86  87  88  89  90  
+  INPUT ---       91  92  93;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  004
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---                                   99 115 116  86  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                                      100 116 117  87  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                                          101 117 118  88  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                                              102 118 119  89  90  
+  INPUT ---       91  92  93;
+  INPUT ---                                                  103 119 120  90  
+  INPUT ---       91  92  93;
+  INPUT ---                                                      104 120 121  
+  INPUT ---       91  92  93;
+  INPUT ---                                                          105 121 
+  INPUT ---       122  92  93;
+  INPUT ---                                                              106 
+  INPUT ---       122 123  93;
+  INPUT ---                                                                  
+  INPUT ---       107 123 124;
+  INPUT ---                                                                   
+  INPUT ---          108 124;
+  INPUT ---                                                                   
+  INPUT ---              109;
+
+  INPUT ---    group=2 r rows=16 cols=16 Triang Time=78;
+
+  INPUT ---    group=1 F rows=15 cols=15 Triang;
+  INPUT ---              140 141 127 128 129 130 131 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                  141 142 128 129 130 131 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                      142 143 129 130 131 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                          143 144 130 131 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                              144 145 131 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                                  145 146 132 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                                      146 147 133 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                                          147 148 134 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                                              148 149 135 136 137 
+  INPUT ---       138 139;
+  INPUT ---                                                  149 150 136 137 
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  005
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       138 139;
+  INPUT ---                                                      150 151 137 
+  INPUT ---       138 139;
+  INPUT ---                                                          151 152 
+  INPUT ---       138 139;
+  INPUT ---                                                              152 
+  INPUT ---       153 139;
+  INPUT ---                                                                  
+  INPUT ---       153 154;
+  INPUT ---                                                                   
+  INPUT ---          154;
+
+  INPUT ---    group=2 F rows=15 cols=15 Triang Time=125;
+
+  INPUT ---    design matrix constraints=154 covariates=29;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  006
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  007
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  008
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  009
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+  INPUT ---       0 0 0;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  010
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       0 0 0;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 1;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 2;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 3;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  011
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       1 0 4;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 5;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 6;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 7;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 8;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 9;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 10;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 11;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 12;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 13;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 14;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 0 15;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 1;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 2;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 3;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 4;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 5;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 6;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 7;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 8;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 9;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 10;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 11;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  012
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 12;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 13;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 14;
+  INPUT ---              0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+  INPUT ---       1 1 15;
+  INPUT ---       blabel(1)=S_Int;
+  INPUT ---       blabel(2)=S_Juv;
+  INPUT ---       blabel(3)=S_BothTimeLibs_2007_3YrsEffect_SeparatedEffect;
+  INPUT ---       blabel(4)=S_BothTimeLibs_2010_3YrsEffect_SeparatedEffect;
+  INPUT ---       blabel(5)=S_BothTimeLibs_2016_3YrsEffect_SeparatedEffect;
+  INPUT ---       blabel(6)=p_Int;
+  INPUT ---       blabel(7)=p_2ndYear;
+  INPUT ---       blabel(8)=p_PreExpansion;
+  INPUT ---       blabel(9)=r_Int;
+  INPUT ---       blabel(10)=r_Juv;
+  INPUT ---       blabel(11)=r_2ndYear;
+  INPUT ---       blabel(12)=r1;
+  INPUT ---       blabel(13)=r2;
+  INPUT ---       blabel(14)=r3;
+  INPUT ---       blabel(15)=r4;
+  INPUT ---       blabel(16)=r5;
+  INPUT ---       blabel(17)=r6;
+  INPUT ---       blabel(18)=r7;
+  INPUT ---       blabel(19)=r8;
+  INPUT ---       blabel(20)=r9;
+  INPUT ---       blabel(21)=r10;
+  INPUT ---       blabel(22)=r11;
+  INPUT ---       blabel(23)=r12;
+  INPUT ---       blabel(24)=r13;
+  INPUT ---       blabel(25)=r14;
+  INPUT ---       blabel(26)=r15;
+  INPUT ---       blabel(27)=F_Int;
+  INPUT ---       blabel(28)=F_2ndYear;
+  INPUT ---       blabel(29)=LinearTrend;
+  INPUT ---       rlabel(1)=S;
+  INPUT ---       rlabel(2)=S;
+  INPUT ---       rlabel(3)=S;
+  INPUT ---       rlabel(4)=S;
+  INPUT ---       rlabel(5)=S;
+  INPUT ---       rlabel(6)=S;
+  INPUT ---       rlabel(7)=S;
+  INPUT ---       rlabel(8)=S;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  013
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       rlabel(9)=S;
+  INPUT ---       rlabel(10)=S;
+  INPUT ---       rlabel(11)=S;
+  INPUT ---       rlabel(12)=S;
+  INPUT ---       rlabel(13)=S;
+  INPUT ---       rlabel(14)=S;
+  INPUT ---       rlabel(15)=S;
+  INPUT ---       rlabel(16)=S;
+  INPUT ---       rlabel(17)=S;
+  INPUT ---       rlabel(18)=S;
+  INPUT ---       rlabel(19)=S;
+  INPUT ---       rlabel(20)=S;
+  INPUT ---       rlabel(21)=S;
+  INPUT ---       rlabel(22)=S;
+  INPUT ---       rlabel(23)=S;
+  INPUT ---       rlabel(24)=S;
+  INPUT ---       rlabel(25)=S;
+  INPUT ---       rlabel(26)=S;
+  INPUT ---       rlabel(27)=S;
+  INPUT ---       rlabel(28)=S;
+  INPUT ---       rlabel(29)=S;
+  INPUT ---       rlabel(30)=S;
+  INPUT ---       rlabel(31)=S;
+  INPUT ---       rlabel(32)=S;
+  INPUT ---       rlabel(33)=S;
+  INPUT ---       rlabel(34)=S;
+  INPUT ---       rlabel(35)=S;
+  INPUT ---       rlabel(36)=S;
+  INPUT ---       rlabel(37)=S;
+  INPUT ---       rlabel(38)=S;
+  INPUT ---       rlabel(39)=S;
+  INPUT ---       rlabel(40)=S;
+  INPUT ---       rlabel(41)=S;
+  INPUT ---       rlabel(42)=S;
+  INPUT ---       rlabel(43)=S;
+  INPUT ---       rlabel(44)=S;
+  INPUT ---       rlabel(45)=S;
+  INPUT ---       rlabel(46)=S;
+  INPUT ---       rlabel(47)=S;
+  INPUT ---       rlabel(48)=p;
+  INPUT ---       rlabel(49)=p;
+  INPUT ---       rlabel(50)=p;
+  INPUT ---       rlabel(51)=p;
+  INPUT ---       rlabel(52)=p;
+  INPUT ---       rlabel(53)=p;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  014
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       rlabel(54)=p;
+  INPUT ---       rlabel(55)=p;
+  INPUT ---       rlabel(56)=p;
+  INPUT ---       rlabel(57)=p;
+  INPUT ---       rlabel(58)=p;
+  INPUT ---       rlabel(59)=p;
+  INPUT ---       rlabel(60)=p;
+  INPUT ---       rlabel(61)=p;
+  INPUT ---       rlabel(62)=p;
+  INPUT ---       rlabel(63)=p;
+  INPUT ---       rlabel(64)=p;
+  INPUT ---       rlabel(65)=p;
+  INPUT ---       rlabel(66)=p;
+  INPUT ---       rlabel(67)=p;
+  INPUT ---       rlabel(68)=p;
+  INPUT ---       rlabel(69)=p;
+  INPUT ---       rlabel(70)=p;
+  INPUT ---       rlabel(71)=p;
+  INPUT ---       rlabel(72)=p;
+  INPUT ---       rlabel(73)=p;
+  INPUT ---       rlabel(74)=p;
+  INPUT ---       rlabel(75)=p;
+  INPUT ---       rlabel(76)=p;
+  INPUT ---       rlabel(77)=p;
+  INPUT ---       rlabel(78)=r;
+  INPUT ---       rlabel(79)=r;
+  INPUT ---       rlabel(80)=r;
+  INPUT ---       rlabel(81)=r;
+  INPUT ---       rlabel(82)=r;
+  INPUT ---       rlabel(83)=r;
+  INPUT ---       rlabel(84)=r;
+  INPUT ---       rlabel(85)=r;
+  INPUT ---       rlabel(86)=r;
+  INPUT ---       rlabel(87)=r;
+  INPUT ---       rlabel(88)=r;
+  INPUT ---       rlabel(89)=r;
+  INPUT ---       rlabel(90)=r;
+  INPUT ---       rlabel(91)=r;
+  INPUT ---       rlabel(92)=r;
+  INPUT ---       rlabel(93)=r;
+  INPUT ---       rlabel(94)=r;
+  INPUT ---       rlabel(95)=r;
+  INPUT ---       rlabel(96)=r;
+  INPUT ---       rlabel(97)=r;
+  INPUT ---       rlabel(98)=r;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  015
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       rlabel(99)=r;
+  INPUT ---       rlabel(100)=r;
+  INPUT ---       rlabel(101)=r;
+  INPUT ---       rlabel(102)=r;
+  INPUT ---       rlabel(103)=r;
+  INPUT ---       rlabel(104)=r;
+  INPUT ---       rlabel(105)=r;
+  INPUT ---       rlabel(106)=r;
+  INPUT ---       rlabel(107)=r;
+  INPUT ---       rlabel(108)=r;
+  INPUT ---       rlabel(109)=r;
+  INPUT ---       rlabel(110)=r;
+  INPUT ---       rlabel(111)=r;
+  INPUT ---       rlabel(112)=r;
+  INPUT ---       rlabel(113)=r;
+  INPUT ---       rlabel(114)=r;
+  INPUT ---       rlabel(115)=r;
+  INPUT ---       rlabel(116)=r;
+  INPUT ---       rlabel(117)=r;
+  INPUT ---       rlabel(118)=r;
+  INPUT ---       rlabel(119)=r;
+  INPUT ---       rlabel(120)=r;
+  INPUT ---       rlabel(121)=r;
+  INPUT ---       rlabel(122)=r;
+  INPUT ---       rlabel(123)=r;
+  INPUT ---       rlabel(124)=r;
+  INPUT ---       rlabel(125)=F;
+  INPUT ---       rlabel(126)=F;
+  INPUT ---       rlabel(127)=F;
+  INPUT ---       rlabel(128)=F;
+  INPUT ---       rlabel(129)=F;
+  INPUT ---       rlabel(130)=F;
+  INPUT ---       rlabel(131)=F;
+  INPUT ---       rlabel(132)=F;
+  INPUT ---       rlabel(133)=F;
+  INPUT ---       rlabel(134)=F;
+  INPUT ---       rlabel(135)=F;
+  INPUT ---       rlabel(136)=F;
+  INPUT ---       rlabel(137)=F;
+  INPUT ---       rlabel(138)=F;
+  INPUT ---       rlabel(139)=F;
+  INPUT ---       rlabel(140)=F;
+  INPUT ---       rlabel(141)=F;
+  INPUT ---       rlabel(142)=F;
+  INPUT ---       rlabel(143)=F;
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:31    Page  016
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+  INPUT ---       rlabel(144)=F;
+  INPUT ---       rlabel(145)=F;
+  INPUT ---       rlabel(146)=F;
+  INPUT ---       rlabel(147)=F;
+  INPUT ---       rlabel(148)=F;
+  INPUT ---       rlabel(149)=F;
+  INPUT ---       rlabel(150)=F;
+  INPUT ---       rlabel(151)=F;
+  INPUT ---       rlabel(152)=F;
+  INPUT ---       rlabel(153)=F;
+  INPUT ---       rlabel(154)=F;
+
+ Link Function Used is LOGIT        
+
+ Variance Estimation Procedure Used is 2ndPart 
+ -2logL(saturated) = 63523.935     
+ Effective Sample Size = 25541
+
+ Number of function evaluations was 71 for 29 parameters.
+ CPU Time for numerical optimization was 2.41 seconds.     
+ -2logL {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 70115.220     
+ Penalty {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 0.0000000     
+ Gradient {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]}:
+   0.0000000       0.0000000      0.56981117E-03   0.0000000       0.0000000    
+  0.28495244E-03   0.0000000      0.35023126E-03   0.0000000       0.0000000    
+   0.0000000      0.81218346E-03  0.75723559E-03  0.86808229E-03   0.0000000    
+   0.0000000       0.0000000       0.0000000       0.0000000       0.0000000    
+   0.0000000      0.93309015E-03   0.0000000       0.0000000       0.0000000    
+   0.0000000       0.0000000       0.0000000       0.0000000    
+ Maximum ABS(G) {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 0.9330902E-03 
+ CPU Time to compute VC matrix was 0.97 seconds.     
+ S Vector {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]}:
+   5454.700      3449.113      1834.297      987.6053      942.4953    
+   493.3618      355.8827      288.0976      223.9041      211.1951    
+   200.8862      195.8103      187.8569      178.4494      165.2845    
+   161.8470      148.9256      143.5694      132.2758      119.6704    
+   95.51091      71.43628      58.26762      37.43807      36.42641    
+   26.44309      20.60337      12.26553      5.888189    
+ CPU Time to invert VC matrix was 0.01 seconds.     
+ Ratio Threshold = 50.000000       Max Gap (28/29) = 2.0830739       Next Max Gap (5/6) = 1.9103535     
+ Gap Method for Num. of Estimated Parameters {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 29          
+ Threshold {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 0.0018662               
+ Numerical Threshold Method for Num. of Estimated Parameters {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 29          
+ Number of Estimated Parameters {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 29          
+ DEVIANCE {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 6591.2850               
+ DEVIANCE Degrees of Freedom {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 699          
+ c-hat {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 9.4295923               
+ AIC {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 70173.220               
+ AICc {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 70173.288               
+ BIC {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 70409.513               
+ Pearson Chisquare {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 49139.043               
+ Possible Encounter Histories {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 131374          
+ Pearson Chisquare df {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 131313          
+ Pearson chat {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 0.3742131               
+ Sum(Observed/Expected) {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 40499.691               
+ s-bar {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = -0.6918907              
+ Fletcher chat {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]} = 1.2145466               
+
+
+ LOGIT Link Function Parameters of {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]}
+                                                              95% Confidence Interval
+    Parameter                  Beta         Standard Error     Lower           Upper
+ -------------------------  --------------  --------------  --------------  --------------
+    1:S_Int                  1.4014320       0.0567956       1.2901127       1.5127513    
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:34    Page  017
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+    2:S_Juv                 -0.4995907       0.1311343      -0.7566139      -0.2425675    
+    3:S_BothTimeLibs_2007_  -0.7138353       0.0696416      -0.8503328      -0.5773378    
+    4:S_BothTimeLibs_2010_  -0.4419034       0.0842584      -0.6070498      -0.2767570    
+    5:S_BothTimeLibs_2016_  -0.1826332       0.0984529      -0.3756009       0.0103345    
+    6:p_Int                 -2.4271070       0.0319114      -2.4896533      -2.3645607    
+    7:p_2ndYear              0.0059276       0.0897432      -0.1699690       0.1818243    
+    8:p_PreExpansion         1.7883362       0.0549013       1.6807296       1.8959428    
+    9:r_Int                 -0.5196333       0.0988818      -0.7134415      -0.3258250    
+   10:r_Juv                 -0.8416045       0.1308673      -1.0981043      -0.5851046    
+   11:r_2ndYear              0.4592172       0.1264448       0.2113854       0.7070490    
+   12:r1                    -0.2023915       0.1934355      -0.5815251       0.1767421    
+   13:r2                     0.2896416       0.1611592      -0.0262304       0.6055136    
+   14:r3                    -0.1249654       0.1378842      -0.3952184       0.1452877    
+   15:r4                    -0.6601025       0.1281416      -0.9112600      -0.4089450    
+   16:r5                    -0.5303538       0.1268284      -0.7789375      -0.2817702    
+   17:r6                    -0.2657146       0.1485853      -0.5569419       0.0255126    
+   18:r7                    -0.4114078       0.1354063      -0.6768042      -0.1460114    
+   19:r8                    -0.4372351       0.1310138      -0.6940221      -0.1804482    
+   20:r9                    -0.1378685       0.1187424      -0.3706037       0.0948667    
+   21:r10                    0.1516063       0.1170924      -0.0778948       0.3811075    
+   22:r11                    0.0465897       0.1134225      -0.1757185       0.2688978    
+   23:r12                   -0.4045986       0.1745253      -0.7466682      -0.0625289    
+   24:r13                   -0.4431962       0.1553221      -0.7476275      -0.1387650    
+   25:r14                   -0.5578246       0.1468068      -0.8455660      -0.2700832    
+   26:r15                   -0.0828270       0.1057668      -0.2901299       0.1244758    
+   27:F_Int                  0.4895110       0.1066616       0.2804542       0.6985678    
+   28:F_2ndYear             -0.4197239       0.1920707      -0.7961824      -0.0432654    
+   29:LinearTrend            0.2071156       0.0177830       0.1722609       0.2419702    
+
+
+ Real Function Parameters of {DM_S[2Age+Hunt_BothLib_3yreffect2007_2010_2016_SeparatedEffect]p[2Age_pf+2TimePer]r[3Age+Year]F[2Age_pf+LinearTrend]}
+                                                               95% Confidence Interval
+     Parameter                Estimate       Standard Error     Lower           Upper
+ --------------------------  --------------  --------------  --------------  --------------
+     1:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+     2:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+     3:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+     4:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+     5:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+     6:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+     7:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+     8:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+     9:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    10:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    11:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:34    Page  018
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+    12:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    13:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    14:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    15:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    16:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    17:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    18:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    19:S                      0.5468635       0.0321400       0.4834548       0.6087872                          
+    20:S                      0.5468635       0.0321400       0.4834548       0.6087872                          
+    21:S                      0.5468635       0.0321400       0.4834548       0.6087872                          
+    22:S                      0.6129995       0.0321277       0.5484722       0.6737898                          
+    23:S                      0.6129995       0.0321277       0.5484722       0.6737898                          
+    24:S                      0.6129995       0.0321277       0.5484722       0.6737898                          
+    25:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    26:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    27:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    28:S                      0.6724326       0.0309206       0.6092278       0.7299460                          
+    29:S                      0.6724326       0.0309206       0.6092278       0.7299460                          
+    30:S                      0.6724326       0.0309206       0.6092278       0.7299460                          
+    31:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    32:S                      0.7113277       0.0289946       0.6513740       0.7646957                          
+    33:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    34:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+    35:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+    36:S                      0.6654321       0.0098035       0.6459511       0.6843650                          
+    37:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+    38:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+    39:S                      0.7230274       0.0100316       0.7029419       0.7422529                          
+    40:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    41:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    42:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    43:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    44:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    45:S                      0.7718521       0.0116653       0.7481860       0.7939067                          
+    46:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    47:S                      0.8024110       0.0090048       0.7841663       0.8194686                          
+    48:p                      0.3455245       0.0113251       0.3236761       0.3680451                          
+    49:p                      0.3455245       0.0113251       0.3236761       0.3680451                          
+    50:p                      0.3455245       0.0113251       0.3236761       0.3680451                          
+    51:p                      0.3455245       0.0113251       0.3236761       0.3680451                          
+    52:p                      0.3455245       0.0113251       0.3236761       0.3680451                          
+    53:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    54:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    55:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    56:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:34    Page  019
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+    57:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    58:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    59:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    60:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    61:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    62:p                      0.0811289       0.0023789       0.0765867       0.0859153                          
+    63:p                      0.3468661       0.0210187       0.3068927       0.3891231                          
+    64:p                      0.3468661       0.0210187       0.3068927       0.3891231                          
+    65:p                      0.3468661       0.0210187       0.3068927       0.3891231                          
+    66:p                      0.3468661       0.0210187       0.3068927       0.3891231                          
+    67:p                      0.3468661       0.0210187       0.3068927       0.3891231                          
+    68:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    69:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    70:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    71:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    72:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    73:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    74:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    75:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    76:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    77:p                      0.0815719       0.0067239       0.0693259       0.0957584                          
+    78:r                      0.3269473       0.0405336       0.2529282       0.4107189                          
+    79:r                      0.4427542       0.0377050       0.3706277       0.5173784                          
+    80:r                      0.3442078       0.0204983       0.3052152       0.3854184                          
+    81:r                      0.2350997       0.0142938       0.2082463       0.2642601                          
+    82:r                      0.2592276       0.0150399       0.2308538       0.2897749                          
+    83:r                      0.3131684       0.0214262       0.2727747       0.3566106                          
+    84:r                      0.2827135       0.0167644       0.2510398       0.3166937                          
+    85:r                      0.2775056       0.0153180       0.2485029       0.3085037                          
+    86:r                      0.3413010       0.0255075       0.2932019       0.3929045                          
+    87:r                      0.4090179       0.0259187       0.3593496       0.4606154                          
+    88:r                      0.3838961       0.0228406       0.3402187       0.4295304                          
+    89:r                      0.2840964       0.0218794       0.2432247       0.3288517                          
+    90:r                      0.2763120       0.0176107       0.2431575       0.3121229                          
+    91:r                      0.2539874       0.0155747       0.2246856       0.2857023                          
+    92:r                      0.3537810       0.0249981       0.3064489       0.4041635                          
+    93:r                      0.3729380       0.0231240       0.3288388       0.4192568                          
+    94:r                      0.1731265       0.0320478       0.1189497       0.2451138                          
+    95:r                      0.2550997       0.0379662       0.1879786       0.3362628                          
+    96:r                      0.1844923       0.0216841       0.1457058       0.2308141                          
+    97:r                      0.1169805       0.0155619       0.0897558       0.1510922                          
+    98:r                      0.1310631       0.0167832       0.1015213       0.1675977                          
+    99:r                      0.1642483       0.0222219       0.1251823       0.2125436                          
+   100:r                      0.1452136       0.0189046       0.1119321       0.1863149                          
+   101:r                      0.1420371       0.0180689       0.1101620       0.1812564                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:34    Page  020
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   102:r                      0.1825589       0.0252276       0.1381852       0.2372589                          
+   103:r                      0.2297663       0.0294509       0.1771462       0.2924613                          
+   104:r                      0.2117101       0.0264979       0.1643999       0.2682640                          
+   105:r                      0.1460609       0.0204772       0.1103057       0.1909189                          
+   106:r                      0.1413122       0.0186377       0.1085652       0.1819209                          
+   107:r                      0.1279662       0.0169400       0.0982697       0.1649947                          
+   108:r                      0.1909167       0.0261142       0.1448694       0.2473664                          
+   109:r                      0.2040392       0.0260006       0.1577554       0.2597149                          
+   110:r                      0.5570568       0.0491878       0.4597137       0.6502063                          
+   111:r                      0.4537869       0.0390040       0.3789969       0.5307225                          
+   112:r                      0.3272788       0.0316152       0.2685549       0.3919625                          
+   113:r                      0.3564582       0.0336470       0.2935393       0.4247549                          
+   114:r                      0.4191824       0.0394846       0.3443442       0.4979332                          
+   115:r                      0.3841846       0.0358118       0.3168023       0.4563263                          
+   116:r                      0.3780928       0.0346926       0.3128494       0.4480702                          
+   117:r                      0.4505906       0.0416506       0.3709729       0.5328218                          
+   118:r                      0.5227818       0.0409793       0.4425658       0.6018396                          
+   119:r                      0.4965435       0.0396959       0.4194438       0.5738078                          
+   120:r                      0.3857969       0.0393167       0.3121207       0.4651054                          
+   121:r                      0.3766921       0.0360537       0.3090471       0.4495111                          
+   122:r                      0.3501817       0.0340179       0.2867446       0.4194008                          
+   123:r                      0.4642503       0.0416818       0.3842122       0.5461734                          
+   124:r                      0.4849006       0.0402805       0.4069705       0.5635719                          
+   125:F                      0.6674394       0.0209028       0.6252869       0.7070715                          
+   126:F                      0.7117179       0.0171569       0.6769621       0.7441476                          
+   127:F                      0.7522890       0.0141295       0.7235713       0.7789347                          
+   128:F                      0.7888443       0.0119397       0.7644945       0.8112979                          
+   129:F                      0.8212866       0.0105428       0.7996811       0.8410251                          
+   130:F                      0.8496942       0.0097377       0.8295953       0.8678002                          
+   131:F                      0.8742774       0.0092617       0.8549753       0.8913370                          
+   132:F                      0.8953352       0.0088994       0.8765653       0.9115389                          
+   133:F                      0.9132161       0.0085248       0.8949869       0.9285335                          
+   134:F                      0.9282868       0.0080861       0.9107309       0.9426077                          
+   135:F                      0.9409098       0.0075766       0.9241899       0.9541251                          
+   136:F                      0.9514271       0.0070116       0.9356874       0.9634652                          
+   137:F                      0.9601518       0.0064137       0.9454970       0.9709871                          
+   138:F                      0.9673631       0.0058056       0.9538545       0.9770124                          
+   139:F                      0.9733056       0.0052068       0.9609643       0.9818190                          
+   140:F                      0.5687867       0.0447524       0.4798297       0.6535160                          
+   141:F                      0.6186963       0.0425333       0.5326143       0.6979160                          
+   142:F                      0.6662191       0.0399967       0.5838502       0.7395572                          
+   143:F                      0.7105896       0.0372617       0.6325380       0.7778841                          
+   144:F                      0.7512640       0.0344258       0.6779310       0.8125172                          
+   145:F                      0.7879279       0.0315644       0.7195520       0.8432644                          
+   146:F                      0.8204790       0.0287346       0.7571709       0.8701133                          
+
+  Program  MARK  - Survival Rate Estimation with Capture-Recapture Data
+   gfortran(dble) Vers. 9.0 Jan 2019  25-Oct-2025 13:48:34    Page  021
+   Veon_Dooley_ModelSet_Redo
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ 
+   147:F                      0.8489913       0.0259803       0.7907619       0.8932044                          
+   148:F                      0.8736724       0.0233362       0.8204515       0.9127946                          
+   149:F                      0.8948194       0.0208293       0.8464692       0.9292163                          
+   150:F                      0.9127798       0.0184805       0.8691069       0.9428394                          
+   151:F                      0.9279203       0.0163041       0.8886865       0.9540409                          
+   152:F                      0.9406037       0.0143084       0.9055367       0.9631823                          
+   153:F                      0.9511726       0.0124961       0.9199776       0.9705956                          
+   154:F                      0.9599411       0.0108649       0.9323108       0.9765762                          
+
+   CPU Time for the last procedure was 3.38 seconds.     
+
+
+  INPUT --- proc stop;
+
+     CPU Time in minutes for this job was 0.06
+
+     Time Start = 13:48:30.834   Time End = 13:48:34.819
+
+     Wall Clock Time in minutes for this job was 0.07
+
+
+          E X E C U T I O N   S U C C E S S F U L 
