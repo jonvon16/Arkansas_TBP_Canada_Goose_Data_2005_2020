@@ -106,11 +106,11 @@ This final set of concatenated string values was used for the input file.
 - **N**
   - Abundance of Arkansas temperate-breeding Canada geese; N = ((N banded + 1) * (adj-H + 1) * rho / (N recovered [direct] + 1)) - 1
 
-- **Var(N) – subpart 1: Var (b/r)**
+- **Var (N) – subpart 1: Var (b/r)**
   - Variance of the number of bandings divided by the number of direct recoveries;
   - Var (b/r) = (N banded + 1) * (N banded - N recovered [direct]) / (((N recovered [direct] + 1)^2) * (N recovered [direct] + 2))
 
-- **Var(N) – subpart 2: Var (BH/r)**
+- **Var (N) – subpart 2: Var (BH/r)**
   - Variance of the number of bandings divided by the number of direct recoveries corrected for adjusted harvest;
   - Var (BH/r) = (N banded / N recovered [direct])^2 * Var adj-H + adj-H^2 * Var b/r
 
