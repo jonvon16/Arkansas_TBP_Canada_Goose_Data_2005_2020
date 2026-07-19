@@ -1,5 +1,5 @@
 # Data associated with Veon et al. (2026), Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese
-This repository (Veon 2025) contains 1) Program MARK Arkansas Canada goose banding and encounter data, as well as 2) harvest probability and abundance data/calculations, associated with the manuscript: Veon et al., Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. All banding and encounter data used these files is available upon request from the USGS Bird Banding Labratory (USGS BBL 2021).
+This repository (Veon 2026) contains 1) Program MARK Arkansas Canada goose banding and encounter data, as well as 2) harvest probability and abundance data/calculations, associated with the manuscript: Veon et al., Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. All banding and encounter data used these files is available upon request from the USGS Bird Banding Labratory (USGS BBL 2021).
 
 ## AR_CAGO_2005_2020_MARK_Input_File.tmp.txt
 
@@ -152,5 +152,5 @@ This final set of concatenated string values was used for the input file.
 ## References
 USGS Bird Banding Laboratory [USGS BBL]. 2021. North American bird banding and band encounter data set. U.S. Geological Survey, Laurel, Maryland, USA.
 
-Veon, J. T. 2026. Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. Dataset. Zenodo. (https://doi.org/10.5281/zenodo.18027556).
+Veon, J. T. 2026. Evaluating harvest liberalization strategies on population dynamics of southern latitude temperate-breeding Canada geese. Dataset. Zenodo. [insert latest DOI URL from Zenodo]
 
